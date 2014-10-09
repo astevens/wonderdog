@@ -20,5 +20,9 @@ module WonderDog
     config.middleware.delete 'ActionDispatch::BestStandardsSupport'
     config.middleware.delete 'ActionDispatch::Cookies'
     config.middleware.delete 'ActionDispatch::Session::CookieStore'
+
+    config.filter_parameters += [:password]
+    config.action_controller.perform_caching = false
+
   end
 end
