@@ -3,3 +3,7 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the Rails application.
 Rails.application.initialize!
+
+Rails.configuration.middleware.each do |middleware|
+  puts "use #{middleware.inspect}"
+end
