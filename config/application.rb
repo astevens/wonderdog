@@ -24,5 +24,6 @@ module WonderDog
     config.filter_parameters += [:password]
     config.action_controller.perform_caching = false
 
+    config.autoload_paths = [Rails.root + 'app']
   end
 end
