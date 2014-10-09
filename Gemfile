@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'actionmailer', '4.1.6'
 gem 'actionpack', '4.1.6'
 gem 'actionview', '4.1.6'
 gem 'activesupport', '4.1.6'
