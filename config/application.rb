@@ -27,3 +27,11 @@ module WonderDog
     config.autoload_paths = [Rails.root + 'app']
   end
 end
+
+DB = Mysql2::Client.new(
+  :database => 'vcx',
+  :username => 'connection',
+  :password => 'howdy123',
+  :host => 'dev.cwfqp5ujvksm.us-east-1.rds.amazonaws.com',
+  :symbolize_keys => true
+  )
