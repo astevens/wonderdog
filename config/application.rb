@@ -9,7 +9,6 @@ Bundler.require(*Rails.groups)
 module WonderDog
   class Application < Rails::Application
     config.time_zone = 'Central Time (US & Canada)'
-
     config.session_store :disabled
 
     config.middleware.delete 'Rack::Lock'
@@ -23,7 +22,6 @@ module WonderDog
 
     config.filter_parameters += [:password]
     config.action_controller.perform_caching = false
-
     config.autoload_paths = [Rails.root + 'app']
   end
 end

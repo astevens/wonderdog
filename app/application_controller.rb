@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
+  # protect_from_forgery with: :exception
 
-  def index
-    render :text => "Hello there!"
+  def sgwebhook
+    binding.pry
+    names = DB.query("SELECT last_name FROM consumers LIMIT 10").map{|r| r[:last_name]}
+    render :text => names.join(', ')
   end
 end
