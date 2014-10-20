@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   # and we rely on manyal synchronization to keep the R3 code up to date
   def sendgridhook
     params['_json'].each do |event|
-      next unless event['event'] == 'open'
+      next unless event['event'] == 'open' && event['category'].present?
       Sequel::Model.db[:campaign_result_events].insert(
           :id => event['sg_event_id'],
           :type => event['event'].capitalize,
