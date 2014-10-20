@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
     render :text => "responding"
   end
 
-
   # this is setup to be as fast as possible, so that it can catch big streams
   # of sends from multiple servers without barfing
   # the record is inserted manually, without validation or model code
